@@ -1,0 +1,26 @@
+<div class="col-3">
+  {{#each model as |post|}}
+    <div class="card">
+      <div class="card-img">
+        {{#if post.mainImg}}
+          <img src="{{blog-img post.mainImg}}" alt="" />
+        {{else}}
+          <img src="https://unsplash.it/298/200/?random" alt="" />
+        {{/if}}
+      </div>
+      <div class="card-content">
+        <h3>{{post.title}}</h3>
+        <p>
+          {{post.description}}
+        </p>
+      </div>
+      <div class="card-footer">
+        {{#link-to 'posts.post' post class="btn btn-lg radius btn-outline btn-block"}}Read{{/link-to}}
+      </div>
+    </div>
+  {{/each}}
+</div>
+
+<div class="col-9">
+  {{outlet}}
+</div>

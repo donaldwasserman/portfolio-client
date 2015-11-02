@@ -1,0 +1,18 @@
+<div class="card-img">
+  {{#if image}}
+    <img src="{{blog-img image}}" alt="" />
+  {{else}}
+    <img src="https://unsplash.it/298/200/?random" alt="" />
+  {{/if}}
+</div>
+<div class="card-content">
+  <h3>{{title}} | {{slug.slug}}</h3>
+  <p>
+    {{description}}
+  </p>
+</div>
+<div class="card-footer">
+  {{#link-to 'posts.post' slug class="btn btn-lg radius btn-outline"}}Read{{/link-to}}
+</div>
+
+{{yield}}

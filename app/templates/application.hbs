@@ -1,0 +1,15 @@
+<header class="container header-content justify-space-between">
+  <nav class="col-3">
+    <ul class="inline-list">
+        <li>{{#link-to 'about'}}About{{/link-to}}</li>
+        <li>{{#link-to 'projects'}}Projects{{/link-to}}</li>
+        <li>{{#link-to 'posts'}}Blog{{/link-to}}</li>
+    </ul>
+  </nav>
+  <div class="col-4">
+    {{#link-to 'home'}}<h3>Donald Wasserman</h3>{{/link-to}}
+  </div>
+</header>
+<div class="main-content container justify-space-between">
+  {{outlet}}
+</div>
