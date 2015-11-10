@@ -9,7 +9,5 @@ export default DS.Model.extend({
   description: DS.attr('string'),
   content: DS.attr('string'),
   mainImg: DS.attr('string'),
-  formatedDate: Ember.computed('dateString', function() {
-    return momentFormat(this.get('dateString'), 'MMMM Do YYYY');
-  }),
+  shortDate: momentFormat('date', 'YYYY-MM-DD')
 });

@@ -1,0 +1,80 @@
+//colors
+//---------------------------------------------
+
+
+$gray: #898B8C;
+
+$gray-lighter: lighten($gray, 35%);
+$gray-light: lighten($gray, 15%);
+$gray-dark: darken($gray, 15%);
+$gray-darker: darken($gray, 35%);
+
+$red: #FF3C2E;
+$yellow: #FFCA25;
+$green: #4AD690;
+$blue: #16B0DD;
+$salmon: #FF6E61;
+
+
+$color-primary: $blue !default;
+
+$color-alt: #DC8712 !default;
+
+$color-link: $blue;
+
+$color-dark: #212121 !default;
+$color-light: #aaa !default;
+$color-white: #fff !default;
+
+$color-green: #1a4 !default;
+$color-red: #AA252B !default;
+$color-blue: #2E5DBB !default;
+$color-yellow: #fae17b !default;
+
+//fontstack
+//----------------------------------------------
+
+$sans-serif: 	"Hind", "Arial", sans-serif;
+$serif: "Georgia", "Times New Roman", serif;
+$font-family-monospace: "Menlo", "Monaco", "Consolas", "Courier New", monospace;
+
+$body-color: $gray-darker;
+$link-color: $blue;
+
+$bold: 700;
+$light: 300;
+
+$font-size-base: 16px;
+$line-height-base: 24px;
+$line-height-computed: $line-height-base;
+
+//layout
+//---------------------------------------------
+
+$left-base: 1em;
+$margin-base: 1em;
+$padding-base: 1em;
+
+//Responsive variables
+//---------------------------------------------
+
+$screen-sm: 	40em;
+$screen-md: 	64em;
+$screen-lg:		90em;
+$screen-xl: 	120em;
+
+//bootstrap code block
+//---------------------------------------------
+$code-color: $body-color;
+$code-bg: $gray-lighter;
+
+$kbd-color: white;
+$kbd-bg: $gray-darker;
+
+$pre-color: $gray-dark;
+$pre-bg: $gray-light;
+$pre-border-color: $gray;
+$pre-scrollable-max-height: 340px;
+
+$border-radius-base: 6px;
+$border-radius-small: $border-radius-base / 1.5;

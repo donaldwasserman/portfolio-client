@@ -1,5 +1,5 @@
 <div class="col-3">
-  {{#each model as |post|}}
+  {{#each sortedPosts as |post index|}}
     <div class="card">
       <div class="card-img">
         {{#if post.mainImg}}
@@ -9,8 +9,9 @@
         {{/if}}
       </div>
       <div class="card-content">
-        <h3>{{post.title}}</h3>
+        <h3>{{post.title}} </h3>
         <p>
+          <span class="pill card-date">{{moment-format post.shortDate "M-D-YYYY"}}</span>
           {{post.description}}
         </p>
       </div>
@@ -22,5 +23,26 @@
 </div>
 
 <div class="col-9">
+  {{#if showSummary}}
+    <div class="container">
+      <div class="col-push-2 col-8">
+        <h2>Welcome</h2>
+        <p>Welcome to Donald Wasserman&#39;s personal website.  </p>
+        <h3 id="some-things-that-interest-me-">Some things that interest me:</h3>
+        <ul>
+          <li>Drupal</li>
+          <li>Node.js</li>
+          <li>Ember.js</li>
+          <li>Front-end development</li>
+          <li>Digital analytics and strategy</li>
+          <li>Markdown</li>
+          <li>Sass</li>
+        </ul>
+        <h3 id="how-i-built-this-website">How I built this website</h3>
+        <p>View the code for this website on <a href="https://github.com/donaldwasserman/portfolio">GitHub.</a></p>
+        <p>More details to follow.</p>
+      </div>
+    </div>
+  {{/if}}
   {{outlet}}
 </div>

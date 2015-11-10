@@ -1,0 +1,59 @@
+@mixin clearfix {
+    display: inline-block;
+    &:after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+  }
+}
+
+@mixin listreset {
+    @include clearfix;
+    padding-left: 0;
+    margin-left: 0; 
+    list-style-type: none;
+    display: block;
+}
+
+@mixin bp ($point) {
+  @if $point == large {
+    @media (max-width: $screen-lg) { @content; }
+  } 
+  @else if $point == medium {
+    @media (max-width: $screen-md) { @content; }
+  }
+  @else if $point == small {
+    @media (max-width: $screen-sm)  { @content; }
+  }
+  @else if $point == tiny {
+    @media (max-width: $screen-xs)  { @content; }
+  }
+
+}
+
+@mixin center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin headersize ($fontsize-io) {
+  font-size: $fontsize-io;
+  line-height: floor($fontsize-io * $line-height-base);
+}
+
+
+
+@mixin lineargradient ($from, $to) {
+  background-color: $from;
+  background-image: -moz-linear-gradient(top, $from, $to);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($from), to($to));
+  background-image: -webkit-linear-gradient(top, $from, $to);
+  background-image: -o-linear-gradient(top, $from, $to);
+  background-image: linear-gradient(to bottom, $from, $to);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff62c462', endColorstr='#ff51a351', GradientType=0);
+}
+
