@@ -1,28 +1,26 @@
-<div class="col-3">
+<div class="col-3 col-layout">
   {{#each sortedPosts as |post index|}}
-    <div class="card">
-      <div class="card-img">
+  <div class="preview-tab">
+    {{#unless index}}
+      <div class="img-preview">
         {{#if post.mainImg}}
-          <img src="{{blog-img post.mainImg}}" alt="" />
+          <img class="card-img" src="{{blog-img post.mainImg}}" alt="" />
         {{else}}
-          <img src="https://unsplash.it/298/200/?random" alt="" />
+          <img class="card-img" src="https://unsplash.it/298/100/?random" alt="" />
         {{/if}}
       </div>
-      <div class="card-content">
-        <h3>{{post.title}} </h3>
-        <p>
-          <span class="pill card-date">{{moment-format post.shortDate "M-D-YYYY"}}</span>
-          {{post.description}}
-        </p>
-      </div>
-      <div class="card-footer">
-        {{#link-to 'posts.post' post class="btn btn-lg radius btn-outline btn-block"}}Read{{/link-to}}
-      </div>
+    {{/unless}}
+    <div class="tab-body">
+      <span class="pill pull-right card-date">{{moment-format post.shortDate "M-D-YYYY"}}</span>
+      <h4>{{post.title}}</h4>
+      {{post.description}}
+      {{#link-to 'posts.post' post class="button button-default button-block"}}Read{{/link-to}}
     </div>
+  </div>
   {{/each}}
 </div>
 
-<div class="col-9">
+<div class="col-9 col-layout">
   {{#if showSummary}}
     <div class="container">
       <div class="col-push-2 col-8">

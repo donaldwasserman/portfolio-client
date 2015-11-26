@@ -6,6 +6,53 @@ h1,h2,h3,h4,h5 {
   font-family: $sans-serif;
 }
 
+.col-layout {
+  @include typecsset-space(margin-top);
+}
+
+.preview-tab {
+  @include typecsset-space(margin-bottom);
+  &:not(:first-child) {
+    @include typecsset-space(padding-top);
+    border-top: 1px solid $gray;
+  }
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.project-container {
+  padding: 0 1em;
+}
+
+
+.button {
+  font-family: $sans-serif;
+  color: white;
+  border-radius: $border-radius-base;
+  margin-top: 1em;
+  text-align: center;
+  padding: 0.5em;
+  transition: color 200ms;
+}
+
+.button:visited {
+  color: white;
+}
+
+.button-default {
+  background: $blue;
+  &:hover {
+    background: darken($blue, 2%);
+  }
+}
+
+.button-block {
+  display: block;
+}
+
 .inline-list {
   list-style-type: none;
   display: flex;
@@ -44,7 +91,7 @@ h1,h2,h3,h4,h5 {
       background: $yellow;
     }
     li:last-child {
-      background: $blue;
+      background: $green;
     }
   }
 }
@@ -74,12 +121,64 @@ h1,h2,h3,h4,h5 {
 }
 
 pre {
-  background-color: $pre-bg;
-  color: $pre-color;
-  $pre-border-color: $gray;
+  background: $gray-dark;
+}
+code {
+  background: $gray-dark;
+  color: white;
+  border-radius: 2px;
 }
 
-code {
-  background: $code-bg;
-  color: $code-color;
+p code {
+  padding: 0 $margin-base / 2;
+}
+
+.img-container {
+  @include typecsset-space(margin-bottom);
+  max-width: 100%;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.card {
+  margin-top: 0;
+}
+
+.footer {
+  @include typecsset-space(margin-top);
+  padding: 1em;
+  border-top: 1px solid $gray-light;
+
+  .connect {
+    @include listreset;
+    padding: 4px 6px;
+    display: flex;
+    flex-direction: row;
+    align-content: baseline;
+    justify-content: space-between;
+    float: right;
+    margin-top: 1em;
+
+    li {
+      margin-right: $margin-base;
+    }
+
+    a {
+     @extend %pill-dark;
+    }
+  }
+}
+
+.footer-left {
+  float: left;
+  margin-top: 0px;
+  img {
+    display: inline-block;
+    max-width: 50px;
+    position: relative;
+    top: 10px;
+  }
 }

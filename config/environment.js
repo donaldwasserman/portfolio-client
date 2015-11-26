@@ -9,8 +9,8 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
         'connect-src': "'self' http://localhost:3000 dw-blog-api.herokuapp.com",
         'style-src': "'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://maxcdn.bootstrapcdn.com",
-        'font-src': "'self' https://maxcdn.bootstrapcdn.com",
-        'img-src': "'self'  https://unsplash.it http://donaldwasserman.com"
+        'font-src': "'self' https://maxcdn.bootstrapcdn.com http://fonts.gstatic.com 'http://fonts.googleapis.com",
+        'img-src': "'self'  https://unsplash.it http://donaldwasserman.com http://localhost:3000"
     },
     EmberENV: {
       FEATURES: {
@@ -32,7 +32,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
     ENV.APP.host = 'http://localhost:3000';
-    ENV.APP.imgHost = 'donaldwasserman.com/images/';
+    ENV.APP.imgHost = 'localhost:3000/images/';
   }
 
   if (environment === 'test') {

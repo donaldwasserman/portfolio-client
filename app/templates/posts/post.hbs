@@ -2,10 +2,11 @@
 
   <div class="col-push-2 col-8">
       <div class="img-container">
-        <img src="{{blog-img model.mainImg}}" alt="" />
+        {{#if model.mainImg}}
+          <img src="{{blog-img model.mainImg}}" alt="" />
+        {{/if}}
       </div>
       <div class="page-title">
-        <span class="blog-date pill pull-right">{{model.formattedDate}}</span>
         <h2>{{model.title}}</h2>
       </div>
       <p class="lead">

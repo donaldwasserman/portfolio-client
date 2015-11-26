@@ -1,0 +1,14 @@
+<div class="project-head">
+  <img class="img-responsive" src="{{blog-img input.mainImg}}" alt="input.title" />
+</div>
+<div class="project-content">
+  <h3>{{input.title}}</h3>
+  <p>{{unescape-content input.content}}</p>
+</div>
+<div class="project-footer">
+  <p class="">
+    <em><a href="{{input.url}}">View</a></em>
+  </p>
+</div>
+
+{{yield}}
