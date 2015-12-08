@@ -160,13 +160,13 @@ p code {
     align-content: baseline;
     justify-content: space-between;
     float: right;
-    margin-top: 1em;
 
     li {
       margin-right: $margin-base;
     }
 
     a {
+      font-family: $sans-serif;
      @extend %pill-dark;
     }
   }
@@ -181,4 +181,8 @@ p code {
     position: relative;
     top: 10px;
   }
+}
+
+.cat-logo {
+  max-height: $line-height-base;
 }

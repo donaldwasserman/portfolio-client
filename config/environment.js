@@ -7,7 +7,7 @@ module.exports = function(environment) {
     baseURL: '/',
     locationType: 'auto',
     contentSecurityPolicy: {
-        'connect-src': "'self' http://localhost:3000 dw-blog-api.herokuapp.com",
+        'connect-src': "'self' http://localhost:3000 https://dw-blog-api.herokuapp.com",
         'style-src': "'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://maxcdn.bootstrapcdn.com",
         'font-src': "'self' https://maxcdn.bootstrapcdn.com http://fonts.gstatic.com 'http://fonts.googleapis.com",
         'img-src': "'self'  https://unsplash.it http://donaldwasserman.com http://localhost:3000"

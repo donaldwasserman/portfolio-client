@@ -1,1 +1,23 @@
-{{outlet}}
+  <div class="col-3 col-layout">
+    {{#twitter-feed}}
+      <a class="twitter-timeline" href="https://twitter.com/DonaldWasserman" data-widget-id="669891219745472512">Tweets by @DonaldWasserman</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    {{/twitter-feed}}
+
+  </div>
+  <div class="col-8 col-layout">
+    <h3>About Me</h3>
+
+      <p>This website highlights my occasional blog posts on design, marketing, communications, and the areas where they intersect. </p>
+      <p>I am a developer living in Grand Blanc, Michigan. </p>
+      <p>My interests include:</p>
+      <ul>
+        <li>Drupal</li>
+        <li>Front-end development</li>
+        <li>Digital analytics and strategy</li>
+        <li>Node.js</li>
+        <li>Ember.js</li>
+        <li>Sass</li>
+        <li>Sailing</li>
+      </ul>
+    {{outlet}}
+  </div>
