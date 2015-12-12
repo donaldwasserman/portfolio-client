@@ -30,7 +30,7 @@ h1,h2,h3,h4,h5 {
 
 .button {
   font-family: $sans-serif;
-  color: white;
+  color: white !important;
   border-radius: $border-radius-base;
   margin-top: 1em;
   text-align: center;
@@ -39,6 +39,14 @@ h1,h2,h3,h4,h5 {
 }
 
 .button:visited {
+  color: white;
+}
+
+.button:hover {
+  color: white;
+}
+
+.button:focus {
   color: white;
 }
 

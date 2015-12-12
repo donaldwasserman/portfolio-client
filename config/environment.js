@@ -9,8 +9,8 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
         'connect-src': "'self' http://localhost:3000 https://dw-blog-api.herokuapp.com",
         'style-src': "'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://maxcdn.bootstrapcdn.com",
-        'font-src': "'self' https://maxcdn.bootstrapcdn.com http://fonts.gstatic.com 'http://fonts.googleapis.com",
-        'img-src': "'self'  https://unsplash.it http://donaldwasserman.com http://localhost:3000"
+        'font-src': "'self' https://maxcdn.bootstrapcdn.com https://fonts.gstatic.com 'https://fonts.googleapis.com",
+        'img-src': "'self'  https://unsplash.it http://localhost:3000"
     },
     EmberENV: {
       FEATURES: {
