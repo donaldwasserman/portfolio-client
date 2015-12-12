@@ -32,7 +32,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
     ENV.APP.host = 'http://localhost:3000';
-    ENV.APP.imgHost = 'localhost:3000/images/';
+    ENV.APP.imgHost = 'http://localhost:3000/images/';
   }
 
   if (environment === 'test') {
@@ -48,8 +48,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.APP.host = 'dw-blog-api.herokuapp.com';
-    ENV.APP.imgHost = 'donaldwasserman.com/images/';
+    ENV.APP.host = 'https://dw-blog-api.herokuapp.com';
+    ENV.APP.imgHost = 'https://dw-blog-api.herokuapp.com/images/';
   }
 
   return ENV;
